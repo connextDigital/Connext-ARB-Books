@@ -1,0 +1,303 @@
+@mixin Flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.body {
+  padding: 1vh;
+}
+
+.Landing {
+  margin-top: 15vh;
+  @include Flex();
+  flex-direction: column;
+  h3 {
+    color: gray;
+    font-family: Advent Pro;
+  }
+}
+
+.mainLanding {
+  width: 95%;
+  padding: 3vh 0;
+  height: 60vh;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vh;
+
+  video {
+    margin-top: 5vh;
+  }
+  div {
+    width: 40%;
+    h1 {
+      font-size: 11vh;
+      font-family: "Advent Pro";
+      margin: 0;
+      b {
+        font-family: "Advent Pro";
+
+        color: rgb(238, 10, 139);
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0vh;
+      li {
+        font-size: larger;
+        @include Flex();
+        margin-left: -2vw;
+        height: 5vh;
+        img {
+          height: 3vh;
+          width: 3vh;
+          margin-right: 2vw;
+        }
+        h4 {
+          font-family: "Syne";
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  margin-top: 5vh;
+  @include Flex();
+  justify-content: space-between;
+  flex-direction: column;
+  height: 10vh;
+  h2 {
+    margin: 0;
+    color: gray;
+  }
+  video {
+    height: 5vh;
+  }
+}
+
+.navv,
+.navv2 {
+  width: 85vw;
+  img {
+    height: 10vh;
+  }
+  @include Flex();
+  justify-content: space-between;
+  h2 {
+    cursor: pointer;
+    margin-right: 0.5vw;
+  }
+  margin-bottom: 5vh;
+}
+
+.navv2 {
+  width: 100%;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  input {
+    margin-top: 5vh;
+  }
+}
+
+.upload {
+  color: white;
+  background-color: rgb(255, 0, 162);
+  border-radius: 10px;
+  padding: 1vh 3vw;
+  margin-top: 5vh;
+  cursor: pointer;
+}
+
+.TrackingPage {
+  @include Flex();
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  .SearchBox {
+    margin: 2vh;
+    h3 {
+      background-color: rgb(222, 229, 228);
+      font-family: Poppins;
+      padding: 1vh 2vw;
+      font-size: medium;
+      border-radius: 10px;
+    }
+
+    @include Flex();
+    justify-content: space-between;
+    input {
+      margin-left: 1vw;
+      outline: none;
+      border: none;
+      padding: 1vh 2vw;
+      background-color: rgb(219, 239, 240);
+      font-size: medium;
+      text-align: center;
+      width: 30vw;
+      font-family: Poppins;
+      border-radius: 10px;
+    }
+    button {
+      cursor: pointer;
+
+      margin-left: 1vw;
+      background-color: rgb(179, 243, 245);
+      border-radius: 10px;
+      font-family: Poppins;
+      font-size: medium;
+
+      padding: 1vh 2vw;
+      border: none;
+    }
+  }
+  .DetBox {
+    @include Flex();
+    align-items: flex-start;
+    width: 50vw;
+  }
+  .Details {
+    width: 65%;
+    &:nth-child(2) {
+      @include Flex();
+      width: 35%;
+      flex-direction: column;
+    }
+  }
+
+  .DetailHolder,
+  .DetailHolder2 {
+    @include Flex();
+    margin: 1vh;
+    padding: 1vh;
+    h3,
+    h4,
+    h5 {
+      margin: 0;
+      font-family: Poppins;
+    }
+    h3 {
+      width: 10vw;
+    }
+  }
+  .DetailHolder2 {
+    background-color: rgb(239, 232, 232);
+    width: 100%;
+    border-radius: 15px;
+    padding: 1.5vh 1vw;
+    &:nth-child(3) {
+      background-color: rgb(255, 0, 119);
+      color: white;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}
+
+.ordBox {
+  padding: 1vh 2vw;
+  border-radius: 10px 0 0 10px;
+  align-items: center;
+  position: relative;
+
+  width: 85vw;
+
+  h5 {
+    margin: 0.1vh;
+    font-family: Poppins;
+    font-size: small;
+  }
+  margin: 1vh;
+  background-color: rgb(236, 230, 230);
+  //   background-color: rgb(181, 223, 246)
+}
+
+.OrdersData {
+  @include Flex();
+  h3 {
+    font-family: Poppins;
+    font-size: medium;
+    width: 10vw;
+    margin: 0 0.2vw;
+  }
+  h5 {
+    margin: 0;
+    font-family: Poppins;
+  }
+  .mark {
+    background-color: rgb(236, 180, 209);
+    border: none;
+    padding: 1vh;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+.expand {
+  border: none;
+  color: white;
+  background-color: rgb(232, 25, 118);
+  font-size: large;
+  position: absolute;
+  right: -1vw;
+  height: 100%;
+  top: 0;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+.ids {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 2vh;
+  h5 {
+    color: gray;
+  }
+}
+
+.filterBar {
+  width: 85vw;
+  display: flex;
+  padding: 1vh 1vw;
+  justify-content: space-between;
+  span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h4 {
+    margin-right: 1vw;
+  }
+  input {
+    border: 1px solid grey;
+    padding: 0.5vh 1vw;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 1vw;
+  }
+  img {
+    height: 20px;
+  }
+}
+
+.title {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1vh 0;
+
+  @include Flex();
+  width: 87vw;
+  margin-bottom: 2vh;
+  //   padding: 0 3vw;
+  h3 {
+    width: 10vw;
+    margin: 0.2vw;
+    text-align: center;
+  }
+}
