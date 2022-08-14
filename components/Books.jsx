@@ -393,7 +393,7 @@ const Books = () => {
       <div className={s.mainBook}>
         {currentSem == 3 &&
           sem3.map((book, id) => (
-            <div className={s.book}>
+            <div className={s.book} key={id}>
               <img src={book.logo}></img>
               <div>
                 <h2>{book.name}</h2>
@@ -419,7 +419,7 @@ const Books = () => {
           ))}
         {currentSem == 4 &&
           sem4.map((book, id) => (
-            <div className={s.book}>
+            <div className={s.book} key={id}>
               <img src="/bag.png"></img>
               <div>
                 <h2>{book.name}</h2>
@@ -494,7 +494,7 @@ const Books = () => {
             }}
           >
             {mybagArray.map((item, id) => (
-              <div className={s.cartShow}>
+              <div className={s.cartShow} key={id}>
                 <img src={item.logo} />
                 <div>
                   <h2>{item.name}</h2>
@@ -673,7 +673,7 @@ const Books = () => {
                 <h3>Purchase Details</h3>
 
                 {mybagArray.map((item, id) => (
-                  <div className={s.billCart}>
+                  <div className={s.billCart} key={id}>
                     <div>
                       <p>
                         {item.name} &nbsp; Qty :{item.quantity} &nbsp; ₹

@@ -26,7 +26,7 @@ const Tracking = () => {
   //
   return (
     <div className={s.TrackingPage} onLoad={() => callDatabase()}>
-      <div className={s.navv} style={{width: "50vw"}}>
+      <div className={s.navv} style={{ width: "50vw" }}>
         <img src="/booksLogo.png" />
 
         <Link href="/">
@@ -43,7 +43,7 @@ const Tracking = () => {
         <button onClick={() => callDatabase()}>Search</button>
       </div>
       <div>
-        {dataReceived.length !=0 && (
+        {dataReceived.length != 0 && (
           <div className={s.DetBox}>
             <div className={s.Details}>
               <div className={s.DetailHolder}>
@@ -62,7 +62,7 @@ const Tracking = () => {
                 <h3>Books: </h3>
                 <p>
                   {dataReceived[0].bag.map((item) => (
-                    <p>
+                    <p key={item.name}>
                       {item.name} ({item.quantity})
                     </p>
                   ))}

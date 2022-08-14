@@ -50,7 +50,7 @@ const AdminPage = () => {
       {logged && (
         <div className={s.navv2}>
           <img src="/booksLogo.png" />
-          <label for="fileInput" className={s.upload}>
+          <label htmlFor="fileInput" className={s.upload}>
             Enter Credential Key
           </label>
           <input
@@ -101,6 +101,7 @@ const AdminPage = () => {
                     .map((item, index) => (
                       <div
                         className={s.ordBox}
+                        key={item.ordBox}
                         style={{
                           backgroundColor:
                             item.expectedDelivery == "Delivered"
@@ -119,7 +120,7 @@ const AdminPage = () => {
                           </h3>
                           <h3 style={{ width: "15vw" }}>
                             {item.bag.map((items) => (
-                              <h5>
+                              <h5 key={items.name}>
                                 {items.name} ( {items.quantity} )
                               </h5>
                             ))}
