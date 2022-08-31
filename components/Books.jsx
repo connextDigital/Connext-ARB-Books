@@ -84,6 +84,7 @@ const Books = () => {
       ogPrice: 447,
       description: "All 3 subjects Handwritten Notes combined pack",
       product_id: "4AIO",
+      logo: "/SEM3/3AIO.png",
     },
     {
       name: "Computer Networks and Netwrok Design",
@@ -93,6 +94,7 @@ const Books = () => {
       description:
         "CNND Sem 4 Handwritten Notes + Viva Snippets + Solved Paper",
       product_id: "4CNND",
+      logo: "/SEM3/3AIO.png",
     },
     {
       name: "Operating Systems",
@@ -100,6 +102,7 @@ const Books = () => {
       ogPrice: 149,
       description: "OS Sem 4 Handwritten Notes + Viva Snippets + Solved Paper",
       product_id: "4OS",
+      logo: "/SEM3/3AIO.png",
     },
     {
       name: "Computer Organization and Architecture",
@@ -107,6 +110,7 @@ const Books = () => {
       ogPrice: 149,
       description: "COA Sem 4 Handwritten Notes + Viva Snippets + Solved Paper",
       product_id: "4COA",
+      logo: "/SEM3/3AIO.png",
     },
   ];
 
@@ -420,7 +424,7 @@ const Books = () => {
         {currentSem == 4 &&
           sem4.map((book, id) => (
             <div className={s.book} key={id}>
-              <img src="/bag.png"></img>
+              <img src={book.logo}></img>
               <div>
                 <h2>{book.name}</h2>
                 <h3>{book.description}</h3>
